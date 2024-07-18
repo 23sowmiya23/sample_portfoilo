@@ -1,0 +1,534 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f1f1f1;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4f09e5;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #4f09e5;
+    border-bottom: 2px solid #4f09e5;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.profile .text {
+    flex: 1;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skill {
+    width: calc(50% - 10px);
+    margin-bottom: 10px;
+}
+
+.skill .label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+progress {
+    width: 100%;
+    height: 20px;
+    margin-top: 5px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.project h3 {
+    margin-top: 0;
+    color: #4f09e5;
+}
+
+.project p {
+    margin-bottom: 10px;
+}
+
+.project-links a {
+    color: #4f09e5;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.project-links a:hover {
+    text-decoration: underline;
+}
+
+.certificates {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.certificates img {
+    max-width: 150px;
+    height: auto;
+}
+
+#resume {
+    text-align: center;
+}
+
+#resume button {
+    background-color: #4f09e5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#resume button:hover {
+    background-color: #2f0672;
+}
+
+#contact {
+    text-align: center;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#contact-form label {
+    font-weight: bold;
+}
+
+#contact-form input[type="text"],
+#contact-form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact-form textarea {
+    resize: vertical;
+}
+
+#contact-form input[type="button"] {
+    background-color: #4f09e5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#contact-form input[type="button"]:hover {
+    background-color: #2f0672;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    font-size: 24px;
+    color: #4f09e5;
+    margin: 0 10px;
+}
+
+.social-icons a:hover {
+    color: #2f0672;
+}
+
+#certs {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background color for better visibility */
+}
+
+.certificates {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Default to 4 columns */
+    gap: 20px; /* Space between grid items */
+}
+
+.certificate-item {
+    text-align: center; /* Center-align text */
+    border-radius: 5px; /* Rounded corners for the container */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.certificate-item img {
+    width: 100%; /* Make images fit their container */
+    height: auto; /* Maintain aspect ratio of images */
+    object-fit: cover; /* Ensure images cover the container without distortion */
+    transition: transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.certificate-item:hover img {
+    transform: scale(1.1); /* Scale up the image on hover */
+}
+
+.certificate-text {
+    margin-top: 10px; /* Space between the image and the text */
+    font-size: 16px; /* Font size for the text */
+    color: #333; /* Text color */
+}
+
+@media (max-width: 1200px) {
+    .certificates {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium-sized screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .certificates {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .certificates {
+        grid-template-columns: 1fr; /* 1 column for very small screens */
+    }
+}
+
+@media (max-width: 1200px) {
+    .certificates {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium-sized screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .certificates {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .certificates {
+        grid-template-columns: 1fr; /* 1 column for very small screens */
+    }
+}
+
+
+
+
+
+footer {
+    background-color: #4f09e5;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+#projects {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background color for better visibility */
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+    gap: 20px; /* Space between grid items */
+}
+
+.project {
+    background: #fff; /* Background color for each project item */
+    border: 1px solid #ddd; /* Border around each project item */
+    border-radius: 5px; /* Rounded corners for the project items */
+    padding: 20px; /* Padding inside each project item */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for a lifted effect */
+    text-align: center; /* Center-align text */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.project:hover {
+    transform: scale(1.05); /* Slightly enlarge the project item on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.project h3 {
+    margin: 0 0 10px; /* Margin for the project title */
+    font-size: 1.5rem; /* Font size for the title */
+}
+
+.project p {
+    margin: 0 0 20px; /* Margin for the project description */
+    font-size: 1rem; /* Font size for the description */
+    color: #666; /* Text color for the description */
+}
+
+.project-links {
+    display: flex;
+    justify-content: center; /* Center-align the links */
+    gap: 10px; /* Space between the links */
+}
+
+.project-links a {
+    text-decoration: none; /* Remove underline from links */
+    color: #007bff; /* Color for the links */
+    font-size: 1rem; /* Font size for the links */
+    display: flex;
+    align-items: center; /* Center-align icons with text */
+    gap: 5px; /* Space between icon and text */
+}
+
+.project-links a:hover {
+    color: #0056b3; /* Darker color on hover */
+}
+
+
+#certs {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background color for better visibility */
+}
+
+.certificates {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Default to 4 columns */
+    gap: 20px; /* Space between grid items */
+}
+
+.certificate-item {
+    text-align: center; /* Center-align text */
+    border-radius: 5px; /* Rounded corners for the container */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.certificate-item img {
+    width: 100%; /* Make images fit their container */
+    height: auto; /* Maintain aspect ratio of images */
+    object-fit: cover; /* Ensure images cover the container without distortion */
+    transition: transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.certificate-item:hover img {
+    transform: scale(1.1); /* Scale up the image on hover */
+}
+
+.certificate-text {
+    margin-top: 10px; /* Space between the image and the text */
+    font-size: 16px; /* Font size for the text */
+    color: #333; /* Text color */
+}
+
+@media (max-width: 1200px) {
+    .certificates {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium-sized screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .certificates {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .certificates {
+        grid-template-columns: 1fr; /* 1 column for very small screens */
+    }
+}
+#certs {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background color for better visibility */
+}
+
+.certificates {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Default to 4 columns */
+    gap: 20px; /* Space between grid items */
+}
+
+.certificate-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px; /* Rounded corners for the container */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.certificate-item img {
+    width: 100%; /* Make images fit their container */
+    height: auto; /* Maintain aspect ratio of images */
+    object-fit: cover; /* Ensure images cover the container without distortion */
+    transition: transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.certificate-item:hover img {
+    transform: scale(1.1); /* Scale up the image on hover */
+}
+
+.certificate-item p {
+    margin: 10px 0 0; /* Margin for the text */
+    text-align: center; /* Center-align the text */
+    font-size: 16px; /* Font size for the text */
+    color: #333; /* Text color */
+}
+.cen{
+    
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Center the text */
+        color: white; /* Text color for contrast */
+        font-size: 18px; /* Font size for the text */
+        text-align: center; /* Center-align the text */
+        background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+        padding: 10px; /* Padding around the text */
+        border-radius: 5px; /* Optional: rounded corners for the background */
+
+}
+#certs {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background color for better visibility */
+}
+
+.certificates {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Default to 4 columns */
+    gap: 20px; /* Space between grid items */
+}
+
+.certificate-item {
+    text-align: center; /* Center-align text */
+    border-radius: 5px; /* Rounded corners for the container */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.certificate-item img {
+    width: 100%; /* Make images fit their container */
+    height: auto; /* Maintain aspect ratio of images */
+    object-fit: cover; /* Ensure images cover the container without distortion */
+    transition: transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.certificate-item:hover img {
+    transform: scale(1.1); /* Scale up the image on hover */
+}
+
+.certificate-text {
+    margin-top: 10px; /* Space between the image and the text */
+    font-size: 16px; /* Font size for the text */
+    color: #333; /* Text color */
+}
+
+@media (max-width: 1200px) {
+    .certificates {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium-sized screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .certificates {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .certificates {
+        grid-template-columns: 1fr; /* 1 column for very small screens */
+    }
+}
+
+@media (max-width: 1200px) {
+    .certificates {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium-sized screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .certificates {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .certificates {
+        grid-template-columns: 1fr; /* 1 column for very small screens */
+    }
+}
+
